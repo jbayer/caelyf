@@ -21,7 +21,7 @@
         <script language="javascript" src="/js/shBrushXml.js"></script>
 
         <script type="text/javascript">
-        	SyntaxHighlighter.config.clipboardSwf = '/falsh/clipboard.swf';
+        	SyntaxHighlighter.config.clipboardSwf = '/flash/clipboard.swf';
         	SyntaxHighlighter.defaults['light'] = true;
         	SyntaxHighlighter.all();
         </script>
@@ -43,7 +43,7 @@
 
     <body>
         <div id="header">
-            <a href="/" alt="Home"><img src="/images/gaelyk.png" alt="Caelyf - a lightweight Groovy toolkit for Cloud Foundry"></a>
+            <a href="/" alt="Home"><img src="/images/caelyf-logo.png" alt="Caelyf - a lightweight Groovy toolkit for Cloud Foundry"></a>
         </div>
 
         <div id="navigation">
