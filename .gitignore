@@ -1,0 +1,5 @@
+*.iws
+core/.idea
+core/.gradle
+core/build
+

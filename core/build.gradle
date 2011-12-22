@@ -1,0 +1,119 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.5
+targetCompatibility = 1.5
+defaultTasks 'clean', 'build'
+
+// current Caelyf version
+version = '0.1'
+group = 'groovyx.caelyf'
+groovyVersion = '1.8.4'
+
+// various directory places and file names
+tmpProj = "../template-project"
+zipName = "${buildDir}/caelyf-template-project-${version}.zip"
+projLib = "${tmpProj}/war/WEB-INF/lib"
+
+website = "../website"
+apiDir = "${website}/war/api"
+websiteLib = "${website}/war/WEB-INF/lib"
+
+sourceSets {
+    main {
+        groovy {
+            srcDir 'src/main'
+        }
+    }
+
+    test {
+        groovy {
+            srcDir 'src/test'
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    groovy "org.codehaus.groovy:groovy-all:$groovyVersion"
+	compile "javax.servlet:servlet-api:2.5"
+    compile "redis.clients:jedis:2.0.0"
+	testCompile "javax.servlet.jsp:jsp-api:2.2"
+	testCompile "junit:junit:4.10"
+}
+
+jar {
+    baseName 'caelyf'
+    manifest {
+        attributes 'Implementation-Title': 'Caelyf', 'Implementation-Version': version
+    }
+    metaInf { from 'src/main/META-INF' }
+}
+
+groovydoc {
+    def title = "Caelyf ${version}"
+    destinationDir file(apiDir)
+    windowTitle title
+    docTitle title
+    link 'http://java.sun.com/javaee/5/docs/api/', 'javax.servlet.'
+    link 'http://java.sun.com/j2se/1.5.0/docs/api', 'java.,org.xml.,org.xml.'
+    link 'http://groovy.codehaus.org/gapi/', 'org.codehaus.groovy.,groovy.'
+}
+
+task template {
+    description = "Packaging the template project"
+    
+    doFirst {
+        println "Deleting old Caelyf JARs from the template project"
+        ant.delete {
+            fileset dir: projLib, includes: "caelyf-*.jar"
+        }
+
+        println "Copying the latest Caelyf JAR in the template project"
+        ant.copy file: jar.archivePath, todir: projLib
+
+        println "Creating the template project ZIP file"
+        ant.zip basedir: tmpProj, destfile: zipName, excludes: '__MACOSX,*.iml,.DS_Store,bin/**,.gradle/**,build/**'
+    }
+}
+
+task dist(dependsOn: [jar, groovydoc, template]) {
+    description = "Updating the Caelyf JAR of the website"
+  
+    doFirst {
+        ant.copy file: jar.archivePath, todir: websiteLib
+    }
+}
+
+// custom tasks for creating source/javadoc jars
+task sourcesJar(type: Jar, dependsOn:classes) {
+     baseName 'caelyf'
+     classifier 'sources'
+     from sourceSets.main.allSource
+}
+ 
+task javadocJar(type: Jar, dependsOn:groovydoc) {
+     baseName 'caelyf'
+     classifier 'javadoc'
+     from apiDir
+}
+ 
+// add javadoc/source jar tasks as artifacts
+artifacts {
+     archives sourcesJar
+     archives javadocJar
+}
+
+tasks.withType(Upload) { // map the groovy configuration to compile in the pom
+    repositories.withType(MavenResolver) { 
+        pom.scopeMappings.addMapping(1, configurations.groovy, "compile")
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion "1.0-milestone-6"
+}

@@ -1,0 +1,27 @@
+body {
+    font-size: 1.1em;
+}
+
+#header {
+    display: none;
+}
+
+#navigation {
+    display: none;
+}
+
+#footer {
+    display: none;
+}
+
+#sidebox {
+    display: none;
+}
+
+h1 {
+    page-break-before: always;
+}
+
+.hide-on-screen {
+    display: block;
+}
