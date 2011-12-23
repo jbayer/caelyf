@@ -1,5 +1,5 @@
-def stableDuration = 1.hour
-def hotContentDuration = 10.minutes
+def stableDuration = 0.hour
+def hotContentDuration = 0.minutes
 
 get "/",            forward: "/WEB-INF/pages/index.gtpl",     cache: stableDuration
 
@@ -12,7 +12,6 @@ get "/tutorial/views-and-controllers",  forward: "/WEB-INF/pages/tutorial/viewsA
 get "/tutorial/url-routing",            forward: "/WEB-INF/pages/tutorial/flexibleUrlRouting.gtpl",     cache: stableDuration
 get "/tutorial/plugins",                forward: "/WEB-INF/pages/tutorial/plugins.gtpl",                cache: stableDuration
 get "/tutorial/template-project",       forward: "/WEB-INF/pages/tutorial/templateProject.gtpl",        cache: stableDuration
-get "/tutorial/deploy",       			forward: "/WEB-INF/pages/tutorial/deploy.gtpl",        			cache: stableDuration
 
 get "/download",    forward: "/WEB-INF/pages/download.gtpl",  cache: hotContentDuration
 get "/community",   forward: "/WEB-INF/pages/community.gtpl", cache: hotContentDuration
