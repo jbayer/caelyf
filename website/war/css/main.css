@@ -102,6 +102,7 @@ a:hover {
 #header {
 	background: white url('../images/gray-shade.png') repeat-x bottom;
 	padding: 10px;
+    height: 180px;
 }
 
 #content {
