@@ -38,7 +38,7 @@ table.gsc-branding {
 
 input.gsc-search-button {
     color: white;
-    background-color: #D33381;
+    background-color: #8C5CCB;
 
     border: 3px gray ridge;
 
@@ -57,7 +57,7 @@ input.gsc-search-button {
 }
 
 input.gsc-input {
-    border: 3px solid #D33381;
+    border: 3px solid #8C5CCB;
 
     width: 400px;
     height: 30px;
@@ -101,22 +101,22 @@ input.gsc-search-button {
 
 .gs-webResult.gs-result a.gs-title:link,
 .gs-webResult.gs-result a.gs-title:link b {
-    color: #D33381;
+    color: #8C5CCB;
 }
 
 .gs-webResult.gs-result a.gs-title:visited,
 .gs-webResult.gs-result a.gs-title:visited b {
-    color: #D33381;
+    color: #8C5CCB;
 }
 
 .gs-webResult.gs-result a.gs-title:hover,
 .gs-webResult.gs-result a.gs-title:hover b {
-    color: #D33381;
+    color: #8C5CCB;
 }
 
 .gs-webResult.gs-result a.gs-title:active,
 .gs-webResult.gs-result a.gs-title:active b {
-    color: #D33381;
+    color: #8C5CCB;
 }
 
 .gsc-cursor-page {
@@ -124,7 +124,7 @@ input.gsc-search-button {
 }
 
 a.gsc-trailing-more-results:link {
-    color: #D33381;
+    color: #8C5CCB;
 }
 
 .gs-webResult.gs-result .gs-snippet {
@@ -164,11 +164,11 @@ a.gsc-trailing-more-results:link {
 }
 
 .gsc-resultsHeader {
-    border: 1px solid #D33381;
+    border: 1px solid #8C5CCB;
 }
 
 .gsc-cursor-box {
-    border-top: 2px solid #D33381;
+    border-top: 2px solid #8C5CCB;
     padding-top: 2px;
 }
 
@@ -176,7 +176,7 @@ a.gsc-trailing-more-results:link {
 .gs-promotion.gs-result a.gs-title:visited,
 .gs-promotion.gs-result a.gs-title:hover,
 .gs-promotion.gs-result a.gs-title:active {
-    color: #D33381;
+    color: #8C5CCB;
 }
 
 .gs-promotion.gs-result .gs-snippet {

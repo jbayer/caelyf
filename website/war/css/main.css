@@ -4,12 +4,12 @@ body {
 }
 
 h1 {
-	color: #D33381;
+	color: #6C3CAB;
 	border-bottom: black 3px dotted;
 }
 
 h2 {
-	color: #721741;
+	color: #6C3CAB;
 }
 
 li {
@@ -52,7 +52,7 @@ table tr th {
 }
 
 a:visited, a:active, a:link {
-	color: #D33381;
+	color: #8C5CCB;
 }
 
 a:hover {
@@ -81,7 +81,7 @@ a:hover {
 }
 
 #navigation ul li:hover {
-	color: #D33381;
+	color: #8C5CCB;
 	border-bottom: 5px solid;
 }
 
@@ -96,7 +96,7 @@ a:hover {
 }
 
 #navigation ul li a:hover {
-	color: #D33381;
+	color: #8C5CCB;
 }
 
 #header {
@@ -106,7 +106,7 @@ a:hover {
 }
 
 #content {
-	background: #FFE0F6 url('../images/pink-shade.png') repeat-x top;
+	background: #E3E9FF url('../images/pink-shade.png') repeat-x top;
 	padding: 20px;
 	padding-right: 40px;
 	padding-left: 100px;
@@ -183,11 +183,11 @@ a:hover {
 }
 .pic-frame a {
     text-decoration: none;
-    color: #721741;
+    color: #6C3CAB;
 }
 
 .roundPinkBorder {
-    border: 3px solid #D33381;
+    border: 3px solid #8C5CCB;
 
     -webkit-border-radius: 10px;
        -moz-border-radius: 10px;
