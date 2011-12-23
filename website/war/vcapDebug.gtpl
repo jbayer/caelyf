@@ -1,1 +1,0 @@
-${System.getenv('VCAP_SERVICES')}
