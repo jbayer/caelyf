@@ -23,13 +23,13 @@ try {
 } catch (SAXParseException spe) {
     html.div {
         span "A problem occurred while parsing the Google Group RSS feed, please go directly to the"
-        a href: "http://groups.google.com/group/caelyf", "Gaelyk Google Group"
+        a href: "http://groups.google.com/group/caelyf", "Caelyf Google Group"
         span " instead. Or try again later."
     }
 } catch (IOException ioe) {
     html.div {
         span "The Google Group feed could not be fetched, please go directly to the"
-        a href: "http://groups.google.com/group/caelyf", "Gaelyk Google Group"
+        a href: "http://groups.google.com/group/caelyf", "Caelyf Google Group"
         span " instead. Or try again later."
     }
 }
