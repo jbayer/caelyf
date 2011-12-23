@@ -99,6 +99,11 @@ You can <a href="/api/index.html">browse the JavaDoc</a> of the classes composin
         <li><a href="/tutorial/plugins#using">Using a plugin</a></li>
         <li><a href="/tutorial/plugins#distribute">How to distribute and deploy a plugin</a></li>
     </ul>
-</ul>
+
+    <li><a href="/tutorial/deploy">Deploy to Cloud Foundry</a></li>
+    <ul>
+        <li><a href="/tutorial/deploy#assemble">Build and assemble the project</a></li>
+        <li><a href="/tutorial/deploy#vmc">Deploy to Cloud Foundry using vmc</a></li>
+    </ul>
 
 <% if (!params.nowrap) include '/WEB-INF/includes/footer.gtpl' %>
