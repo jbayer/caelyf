@@ -1,4 +1,4 @@
-<title>Simple plugin system</title>
+<% if (!params.nowrap) include '/WEB-INF/includes/header.gtpl?title=Simple+plugin+system' %>
 
 <h1>Simple plugin system</h1>
 
@@ -278,3 +278,5 @@ Then you can share this zip, and someone who wishes to install it on his applica
 and pickup the various files of that archive and stick them up in the appropriate directories
 in his/her <b>Caelyf</b> <code>war/</code> folder, and reference that plugin, as explained in the previous section.
 </p>
+
+<% if (!params.nowrap) include '/WEB-INF/includes/footer.gtpl' %>

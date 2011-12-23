@@ -1,8 +1,4 @@
-<html>
-<head>
-    <title>Download and release notes</title>
-</head>
-<body>
+<% include '/WEB-INF/includes/header.gtpl?title=Download' %>
 
 <h1>Download</h1>
 
@@ -37,5 +33,4 @@ But to get you started quickly, you may use a ready-made template project which 
     <li>Caelyf template project: <a href="https://github.com/downloads/glaforge/caelyf/caelyf-template-project-0.1.zip">caelyf-template-project-0.1.zip</a></li>
 </ul>
 
-</body>
-</html>
+<% include '/WEB-INF/includes/footer.gtpl' %>

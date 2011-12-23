@@ -1,4 +1,4 @@
-<title>Tutorial</title>
+<% if (!params.nowrap) include '/WEB-INF/includes/header.gtpl?title=Tutorial' %>
 
 <h1 style="page-break-before: avoid;">Tutorial</h1>
 
@@ -100,3 +100,5 @@ You can <a href="/api/index.html">browse the JavaDoc</a> of the classes composin
         <li><a href="/tutorial/plugins#distribute">How to distribute and deploy a plugin</a></li>
     </ul>
 </ul>
+
+<% if (!params.nowrap) include '/WEB-INF/includes/footer.gtpl' %>

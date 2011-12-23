@@ -1,8 +1,4 @@
-<html>
-<head>
-    <title>Community</title>
-</head>
-<body>
+<% include '/WEB-INF/includes/header.gtpl?title=Community' %>
 
 <h1>Community</h1>
 
@@ -71,5 +67,4 @@ If you wish to contribute to the development of <b>Caelyf</b>:
 
 <% include "/latestissues.groovy" %>
 
-</body>
-</html>
+<% include '/WEB-INF/includes/footer.gtpl' %>

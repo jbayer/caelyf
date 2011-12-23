@@ -1,13 +1,14 @@
-<html>
-<head>
-    <title>Search</title>
-</head>
-<body>
+<% include '/WEB-INF/includes/header.gtpl?title=Search' %>
+
 <h1>Search the Caelyf website</h1>
+
 <div>
     From this page, you will be able to search the website, the GitHub project page, and the Google Group archive.
 </div>
-<div id="cse">Loading</div>
+
+
+<div id="cse">Loading...</div>
+
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
 <script type="text/javascript">
     google.load('search', '1', { language : 'en'});
@@ -17,6 +18,7 @@
         customSearchControl.draw('cse');
     }, true);
 </script>
+
 <style type="text/css">
 table tr td {
     border: none;
@@ -187,5 +189,4 @@ a.gsc-trailing-more-results:link {
 }
 </style>
 
-</body>
-</html>
+<% include '/WEB-INF/includes/footer.gtpl' %>

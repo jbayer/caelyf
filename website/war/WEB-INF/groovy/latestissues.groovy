@@ -2,7 +2,7 @@ import java.text.SimpleDateFormat as SDF
 import com.ocpsoft.pretty.time.PrettyTime
 import groovy.json.JsonSlurper
 
-def content = "http://github.com/api/v2/json/issues/list/glaforge/caelyf/open".toURL().get().text
+def content = "http://github.com/api/v2/json/issues/list/glaforge/caelyf/open".toURL().text
 def struct = new JsonSlurper().parseText(content)
 
 def sdf = new SDF("yyyy/MM/dd HH:mm:ss Z", Locale.US)

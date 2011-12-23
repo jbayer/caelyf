@@ -1,4 +1,4 @@
-<title>Flexible URL routing</title>
+<% if (!params.nowrap) include '/WEB-INF/includes/header.gtpl?title=Flexible+URL+routing' %>
 
 <h1>Flexible URL routing</h1>
 
@@ -278,3 +278,4 @@ So if you have <code>/breaking-news</code> and <code>/breaking-news?category=pol
 you will have to clear the cache for both, as <b>Caelyf</b> doesn't track all the query parameters.
 </blockquote>
 
+<% if (!params.nowrap) include '/WEB-INF/includes/footer.gtpl' %>

@@ -1,6 +1,6 @@
-<title>The template project</title>
+<% if (!params.nowrap) include '/WEB-INF/includes/header.gtpl?title=The+template+project' %>
 
-<h1>Introduction</h1>
+<h1>The template project</h1>
 
 <p>
 The template project, that you can download from the <a href="/download">download page</a>,
@@ -64,3 +64,4 @@ You will find the following Gradle tasks handy:
     </li>
 </ul>
 
+<% if (!params.nowrap) include '/WEB-INF/includes/footer.gtpl' %>

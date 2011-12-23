@@ -1,4 +1,4 @@
-<title>Views and controllers</title>
+<% if (!params.nowrap) include '/WEB-INF/includes/header.gtpl?title=Views+and+controllers' %>
 
 <h1>Views and controllers</h1>
 
@@ -526,3 +526,4 @@ so be sure to adapt the logging level in your logging configuration file
 if you wish to troubleshoot how routes and plugins are handled.   
 </p>
 
+<% if (!params.nowrap) include '/WEB-INF/includes/footer.gtpl' %>

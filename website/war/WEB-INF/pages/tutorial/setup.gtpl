@@ -1,4 +1,4 @@
-<title>Setting up your project</title>
+<% if (!params.nowrap) include '/WEB-INF/includes/header.gtpl?title=Setting up your project' %>
 
 <h1>Setting up your project</h1>
 
@@ -198,3 +198,5 @@ It uses <b>Gradle</b> for the build, and for running and deploying applications,
 and <b>Spock</b> for testing your groovlets.
 Please have a look at the <a href="/tutorial/template-project">template project section</a> to know more about it.
 </p>
+
+<% if (!params.nowrap) include '/WEB-INF/includes/footer.gtpl' %>

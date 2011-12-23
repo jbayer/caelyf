@@ -1,16 +1,11 @@
-<html>
-<head>
-    <title>Caelyf documentation</title>
-</head>
-
-<body>
+<% include '/WEB-INF/includes/header.gtpl?title=Caelyf+documentation' %>
 
 <%
-    include '../tutorial.gtpl'
-    include 'setup.gtpl'
-    include 'viewsAndControllers.gtpl'
-    include 'flexibleUrlRouting.gtpl'
-    include 'plugins.gtpl'
+    include '../tutorial.gtpl?nowrap=1'
+    include 'setup.gtpl?nowrap=1'
+    include 'viewsAndControllers.gtpl?nowrap=1'
+    include 'flexibleUrlRouting.gtpl?nowrap=1'
+    include 'plugins.gtpl?nowrap=1'
 %>
-</body>
-</html>
+
+<% include '/WEB-INF/includes/footer.gtpl' %>
