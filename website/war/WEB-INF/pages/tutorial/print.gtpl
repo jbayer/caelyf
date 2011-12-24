@@ -6,6 +6,7 @@
     include 'viewsAndControllers.gtpl?nowrap=1'
     include 'flexibleUrlRouting.gtpl?nowrap=1'
     include 'plugins.gtpl?nowrap=1'
+    include 'deploy.gtpl?nowrap=1'
 %>
 
 <% include '/WEB-INF/includes/footer.gtpl' %>
