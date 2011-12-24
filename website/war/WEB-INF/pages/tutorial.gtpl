@@ -105,5 +105,6 @@ You can <a href="/api/index.html">browse the JavaDoc</a> of the classes composin
         <li><a href="/tutorial/deploy#assemble">Build and assemble the project</a></li>
         <li><a href="/tutorial/deploy#vmc">Deploy to Cloud Foundry using vmc</a></li>
     </ul>
+</ul>
 
 <% if (!params.nowrap) include '/WEB-INF/includes/footer.gtpl' %>
