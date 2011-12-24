@@ -31,7 +31,6 @@ We'll follow the directory layout proposed by the <b>Caelyf</b> template project
     +-- js
     +-- WEB-INF
         |
-        +-- appengine-web.xml
         +-- web.xml
         +-- plugins.groovy      // if you use plugins
         +-- routes.groovy       // if you use the URL routing system
@@ -65,12 +64,12 @@ At the root of your project, you'll find:
     <li>
         <code>src</code>: If your project needs source files beyond the templates and groovlets,
         you can place both your Java and Groovy sources in that directory.
-        Before running the local app engine dev server or before deploying your application to app engine,
+        Before running on Micro Cloud Foundry or before deploying your application to cloudfoundry.com,
         you should make sure to pre-compile your Groovy and Java classes so they are available in
         <code>WEB-INF/classes</code>.
     </li>
     <li>
-        <code>war</code>: This directory will be what's going to be deployed on app engine.
+        <code>war</code>: This directory will be what's going to be deployed on Cloud Foundry.
         It contains your groovlets, templates, images, JavaScript files, stylesheets, and more.
         It also contains the classical <code>WEB-INF</code> directory from typical Java web applications.
     </li>
